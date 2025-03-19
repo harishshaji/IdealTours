@@ -519,6 +519,35 @@ header.sticky {
   .tour-grid {
     grid-template-columns: 1fr;
   }
+  
+    .about-grid {
+        display: block; 
+        padding: 20px;
+        text-align: center;
+    }
+
+    .about-images {
+        display: none; 
+    }
+
+    .about-text {
+        width: 100%; 
+        margin: 0 auto; 
+        padding: 10px;
+    }
+
+    .about-text h2 {
+        font-size: 24px; 
+        margin-bottom: 10px;
+		text-align: center; 
+    }
+
+    .about-text p {
+        font-size: 16px;
+        line-height: 1.6;
+        margin-bottom: 12px;
+        color: #444;
+    }
 }
 
 /* Contact Us Section */
