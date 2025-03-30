@@ -1805,7 +1805,7 @@ footer {
   .whatsapp-btn {
     display: block; /* Change to block for better mobile control */
     width: 100%;
-    max-width: 280px;
+    max-width: 250px;
     margin: 0 auto;
     padding: 12px 15px;
     font-size: 15px;
