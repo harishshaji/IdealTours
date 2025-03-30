@@ -48,19 +48,31 @@
   </header>
 
   <!-- Homepage -->
+<!-- Hero Section -->
 <section id="home" class="hero">
   <!-- Slideshow Container -->
   <div class="slideshow">
+    <!-- Slide 1 -->
     <div class="slide active">
-      <img src="./Image/cover.jpeg" alt="Kerala Backwaters" loading="lazy">
+      <img src="./Image/mountains-5112952_1920.jpg" alt="Kerala Backwaters" loading="lazy">
     </div>
+    <!-- Slide 2 -->
+    <div class="slide">
+      <img src="./Image/cover.jpeg" alt="Kerala Hills" loading="lazy">
+    </div>
+    <!-- Slide 3 -->
+    <div class="slide">
+      <img src="./Image/houseboat.jpg" alt="Kochi City" loading="lazy">
+    </div>
+    <!-- Slide Navigation Dots -->
+    <div class="slide-dots"></div>
   </div>
 
-  <!-- Hero Content -->
+  <!-- Hero Content (Keep your existing content) -->
   <div class="container">
-	<h1>Best Travel and Taxi Service in Kerala | Ideal Tours & Travels</h1>
+    <h1>Best Travel and Taxi Service in Kerala | Ideal Tours & Travels</h1>
     <p>Your trusted partner for seamless taxi services and customized travel experiences across Kerala and South India.</p>
-	<h3>"We are happy to make you happier"</h3>
+    <h3>"We are happy to make you happier"</h3>
     <a href="#contact" class="btn" aria-label="Contact Us">Contact Us</a>
   </div>
 </section>
@@ -203,13 +215,14 @@
   
   </section>
   
-  <!-- package section-->
-  <section id="tours" class="tours">
+  <!-- Tours Section -->
+<section id="tours" class="tours">
   <div class="container">
     <h2>Popular Packages</h2>
     <p class="subtitle">Explore our handpicked tours for an unforgettable experience.</p>
 
     <div class="tour-grid">
+      <!-- Backwater Tour Card -->
       <div class="tour-card">
         <div class="tour-image">
           <img src="./Image/backwaters.webp" alt="Backwater Tour">
@@ -217,9 +230,11 @@
         <div class="tour-content">
           <h3>Backwater Tour</h3>
           <p>3 Days | Alleppey, Kumarakom</p>
-          <a href="taxi-fare-rates-kochi.html" class="btn">See Fare Rates</a>
+          <button class="btn tour-btn" data-tour="backwater">View Details</button>
         </div>
       </div>
+      
+      <!-- Hill Station Tour Card -->
       <div class="tour-card">
         <div class="tour-image">
           <img src="./Image/hill station.webp" alt="Hill Station Tour">
@@ -227,9 +242,11 @@
         <div class="tour-content">
           <h3>Hill Station Tour</h3>
           <p>5 Days | Munnar, Thekkady</p>
-          <a href="taxi-fare-rates-kochi.html" class="btn">See Fare Rates</a>
+          <button class="btn tour-btn" data-tour="hill">View Details</button>
         </div>
       </div>
+      
+      <!-- Cultural Tour Card -->
       <div class="tour-card">
         <div class="tour-image">
           <img src="./Image/cultural.webp" alt="Cultural Tour">
@@ -237,12 +254,22 @@
         <div class="tour-content">
           <h3>Cultural Tour</h3>
           <p>7 Days | Kochi, Thrissur, Guruvayur</p>
-          <a href="taxi-fare-rates-kochi.html" class="btn">See Fare Rates</a>
+          <button class="btn tour-btn" data-tour="cultural">View Details</button>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<!-- Tour Details Modal -->
+<div class="tour-modal" id="tourModal">
+  <div class="modal-content">
+    <span class="close-modal">&times;</span>
+    <div class="modal-body">
+      <!-- Content will be inserted here by JavaScript -->
+    </div>
+  </div>
+</div>
 
 <!-- Fleet Carousel Section -->
 <section id="fleet-carousel" class="fleet-carousel">
@@ -341,6 +368,125 @@
     </div>
   </div>
 </section> 
+
+<section id="faq" class="faq-section">
+  <div class="container">
+    <h2>Taxi Service FAQs</h2>
+    <p class="subtitle">Your questions answered about our Kerala taxi services</p>
+    
+    <div class="faq-grid">
+      <!-- FAQ 1 -->
+      <div class="faq-card">
+        <div class="faq-question">
+          <h3>What types of vehicles do you offer for rental?</h3>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>We provide <strong>AC sedans (4-seater)</strong>, <strong>SUVs (6-seater)</strong>, and <strong>Tempo Travelers (12-seater)</strong>. All vehicles are air-conditioned, well-maintained, and driven by professional chauffeurs.</p>
+        </div>
+      </div>
+      
+      <!-- FAQ 2 -->
+      <div class="faq-card">
+        <div class="faq-question">
+          <h3>How do you ensure affordable taxi services?</h3>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>We offer <strong>competitive seasonal rates</strong> with transparent pricing. Our services include fuel, tolls, and driver allowances, ensuring no hidden costs. Contact us for the best deals tailored to your budget.</p>
+        </div>
+      </div>
+      
+      <!-- FAQ 3 -->
+      <div class="faq-card">
+        <div class="faq-question">
+          <h3>Can I hire a taxi for multiple days?</h3>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Yes! We specialize in <strong>long-term rentals</strong> with discounted packages for weekly or monthly bookings. Perfect for exploring Kerala at your own pace.</p>
+        </div>
+      </div>
+      
+      <!-- FAQ 4 -->
+      <div class="faq-card">
+        <div class="faq-question">
+          <h3>Are your drivers knowledgeable about Kerala?</h3>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Absolutely. Our drivers are <strong>local experts</strong> fluent in English, Hindi, and Malayalam. They’ll guide you to hidden gems, scenic routes, and authentic eateries.</p>
+        </div>
+      </div>
+      
+      <!-- FAQ 5 -->
+      <div class="faq-card">
+        <div class="faq-question">
+          <h3>Do you provide airport pickups in Kochi?</h3>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Yes! We offer <strong>24/7 airport transfers</strong> from COK/Nedumbassery with flight tracking. Meet-and-greet service ensures a hassle-free arrival.</p>
+        </div>
+      </div>
+      
+      <!-- FAQ 6 -->
+      <div class="faq-card">
+        <div class="faq-question">
+          <h3>What if my travel plans change?</h3>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>We’re <strong>fully flexible</strong>! Modify pickup times, locations, or vehicle types with just a WhatsApp message. No change fees for adjustments made 2+ hours in advance.</p>
+        </div>
+      </div>
+      
+      <!-- FAQ 7 -->
+      <div class="faq-card">
+        <div class="faq-question">
+          <h3>Are child seats available?</h3>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Yes, we provide <strong>complimentary child seats</strong> on request (subject to availability). Inform us during booking.</p>
+        </div>
+      </div>
+      
+      <!-- FAQ 8 -->
+      <div class="faq-card">
+        <div class="faq-question">
+          <h3>What’s the best season for taxi tours?</h3>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Kerala is year-round! <strong>October–March</strong> offers pleasant weather, while <strong>monsoon (June–September)</strong> showcases lush landscapes. We adjust routes seasonally for optimal experiences.</p>
+        </div>
+      </div>
+      
+      <!-- FAQ 9 -->
+      <div class="faq-card">
+        <div class="faq-question">
+          <h3>Can I customize my sightseeing route?</h3>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Definitely! Our <strong>tailor-made itineraries</strong> let you choose attractions, stops, and durations. Drivers double as guides for personalized tours.</p>
+        </div>
+      </div>
+      
+      <!-- FAQ 10 -->
+      <div class="faq-card">
+        <div class="faq-question">
+          <h3>How do I book for Sabarimala pilgrimage?</h3>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>We offer <strong>special Ayyappa packages</strong> with experienced pilgrimage drivers. Book early for peak seasons (November–January) via <a href="https://wa.me/919037744003">WhatsApp</a>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
   
   <!-- Footer -->
   <footer>
@@ -449,6 +595,362 @@ closeBtn.addEventListener('click', () => {
     currentIndex = (currentIndex + 1) % carouselItems.length;
     updateCarousel();
   }, 5000); 
+  
+  // Hero Slider Functionality
+  const heroSlides = document.querySelectorAll('.hero .slide');
+  const dotsContainer = document.querySelector('.slide-dots');
+  let currentSlide = 0;
+
+  // Create navigation dots
+  heroSlides.forEach((_, index) => {
+    const dot = document.createElement('div');
+    dot.classList.add('slide-dot');
+    if (index === 0) dot.classList.add('active');
+    dot.addEventListener('click', () => goToSlide(index));
+    dotsContainer.appendChild(dot);
+  });
+
+  // Auto-slide every 5 seconds
+  let slideInterval = setInterval(nextSlide, 5000);
+
+  function nextSlide() {
+    goToSlide((currentSlide + 1) % heroSlides.length);
+  }
+
+  function goToSlide(index) {
+    heroSlides[currentSlide].classList.remove('active');
+    document.querySelectorAll('.slide-dot')[currentSlide].classList.remove('active');
+    
+    currentSlide = index;
+    heroSlides[currentSlide].classList.add('active');
+    document.querySelectorAll('.slide-dot')[currentSlide].classList.add('active');
+    
+    // Reset timer on manual navigation
+    clearInterval(slideInterval);
+    slideInterval = setInterval(nextSlide, 5000);
+  }
+
+  // Pause on hover
+  const slideshow = document.querySelector('.slideshow');
+  slideshow.addEventListener('mouseenter', () => clearInterval(slideInterval));
+  slideshow.addEventListener('mouseleave', () => {
+    slideInterval = setInterval(nextSlide, 5000);
+  });
+  
+  
+// ===== TOUR MODAL FUNCTIONALITY =====
+document.addEventListener('DOMContentLoaded', function() {
+  // DOM Elements
+  const tourButtons = document.querySelectorAll('.tour-btn');
+  const modal = document.getElementById('tourModal');
+  const modalBody = document.querySelector('.modal-body');
+  const closeModal = document.querySelector('.close-modal');
+
+  // Tour Data with Detailed Place Descriptions
+  const tours = {
+    backwater: {
+      title: "Backwater Bliss Tour",
+      tagline: "Cruise through Kerala's liquid landscapes",
+      image: "./Image/backwaters.webp",
+      places: [
+        {
+          name: "Alleppey",
+          icon: "fas fa-water",
+          description: "The 'Venice of the East' with intricate canal networks. Glide through narrow waterways in traditional canoes, visit local coir-making villages, and witness the famous Nehru Trophy Snake Boat Race (seasonal). Our packages include luxury houseboats with private decks and authentic Kerala meals."
+        },
+        {
+          name: "Kumarakom",
+          icon: "fas fa-feather-alt",
+          description: "A serene archipelago on Vembanad Lake, renowned for its bird sanctuary. Spot rare migratory birds like Siberian storks (Oct-Mar), enjoy kayaking through mangrove forests, and stay in heritage resorts with stunning lake views. We include guided nature walks with expert ornithologists."
+        },
+        {
+          name: "Kuttanad",
+          icon: "fas fa-tractor",
+          description: "The 'Rice Bowl of Kerala' with unique below-sea-level farming. Experience rural Kerala life with paddy field visits, traditional duck farming demonstrations, and fresh toddy tasting. We arrange homestays with local farming families for authentic cultural immersion."
+        }
+      ],
+      highlights: [
+        " Private AC houseboat with sun deck and ensuite bathroom",
+        " Village canoe tour with toddy tapping demonstration",
+        " Freshwater seafood lunch cooked onboard by private chef",
+        " Sunrise yoga session on the houseboat deck",
+        " Optional add-ons: Ayurvedic massage, Kathakali show tickets"
+      ],
+      note: "Prices vary by season and boat category. Our experts will create a personalized itinerary matching your preferences and budget."
+    },
+    hill: {
+      title: "Mountain Escape Tour",
+      tagline: "Where the clouds kiss the mountains",
+      image: "./Image/hill station.webp",
+      places: [
+        {
+          name: "Munnar",
+          icon: "fas fa-mountain",
+          description: "Rolling hills covered in emerald tea plantations. Visit the Tata Tea Museum, trek to hidden waterfalls, and stay in colonial-era bungalows. We arrange private tea tasting sessions with plantation managers and sunrise views at Top Station."
+        },
+        {
+          name: "Thekkady",
+          icon: "fas fa-paw",
+          description: "Gateway to Periyar Wildlife Sanctuary. Enjoy bamboo rafting for wildlife spotting (elephants, tigers), spice plantation tours with cooking demos, and stay in jungle-facing lodges. We include guided nature walks with tribal guides."
+        },
+        {
+          name: "Vagamon",
+          icon: "fas fa-parachute-box",
+          description: "Kerala's best-kept secret with pine forests and meadows. Experience paragliding (Dec-Feb), visit organic dairy farms, and trek to Kurisumala peak. We arrange stays in glass cottages with panoramic valley views."
+        }
+      ],
+      highlights: [
+        " Private jeep safari in Periyar Wildlife Sanctuary",
+        " Tea plantation trek with expert guide",
+        " Spice garden tour with cooking demonstration",
+        " Optional add-ons: Kalaripayattu martial arts show, paragliding"
+      ],
+      note: "We adjust routes based on weather conditions. Customize with adventure activities or relaxation days as per your preference."
+    },
+    cultural: {
+      title: "Cultural Odyssey Tour",
+      tagline: "Where every temple tells a story",
+      image: "./Image/cultural.webp",
+      places: [
+        {
+          name: "Kochi",
+          icon: "fas fa-fort-awesome",
+          description: "Historic port city with Chinese fishing nets and colonial architecture. We arrange backstage access to Kathakali performances, Jewish Synagogue visits with special permission, and stays in heritage mansions in Fort Kochi."
+        },
+        {
+          name: "Thrissur",
+          icon: "fas fa-gopuram",
+          description: "Cultural capital with the iconic Vadakkumnathan Temple. Experience the spectacular Thrissur Pooram festival (with VIP access if booked early), visit Kerala Kalamandalam arts school, and witness traditional elephant grooming rituals."
+        },
+        {
+          name: "Guruvayur",
+          icon: "fas fa-om",
+          description: "Home to Kerala's most sacred Krishna temple. We arrange special darshan arrangements, elephant sanctuary visits (28-acre Punnathur Kotta), and traditional vegetarian feasts at temple annadanam halls."
+        }
+      ],
+      highlights: [
+        " VIP temple access with special darshan arrangements",
+        " Traditional Kerala sadya lunch",
+        " Kathakali makeup demonstration with artists",
+        " Optional add-ons: Theyyam performances, temple elephant feeding"
+      ],
+      note: "We provide guidance on temple dress codes and rituals. Customize with textile/artisan workshops or beach relaxation days."
+    }
+  };
+
+  // Open Modal with Tour Details
+  function openTourModal(tourId) {
+    const tour = tours[tourId];
+    
+    modalBody.innerHTML = `
+      <h2>${tour.title}</h2>
+      <p class="tagline">${tour.tagline}</p>
+      <img src="${tour.image}" alt="${tour.title}" loading="lazy">
+      
+      <!-- Places Section -->
+      <div class="places-section">
+        <h3><i class="fas fa-map-marked-alt"></i>Iconic Places You'll Explore</h3>
+        ${tour.places.map(place => `
+          <div class="place-card">
+            <h4><i class="${place.icon}"></i> ${place.name}</h4>
+            <p>${place.description}</p>
+          </div>
+        `).join('')}
+      </div>
+      
+      <!-- Highlights Section -->
+      <div class="highlights-box">
+        <h3><i class="fas fa-star"></i> Tour Highlights</h3>
+        <ul>
+          ${tour.highlights.map(item => `<li>${item}</li>`).join('')}
+        </ul>
+      </div>
+      
+      <!-- Assistance Note -->
+      <div class="assistance-note">
+        <p><i class="fas fa-hands-helping"></i> <strong>${tour.note}</strong></p>
+        <p>Tell us your preferences - we'll handle all arrangements!</p>
+      </div>
+      
+      <!-- CTA Buttons -->
+      <div class="modal-cta">
+        <a href="https://wa.me/919037744003?text=Hi%20Ideal%20Tours,%20I%20want%20to%20customize%20the%20${encodeURIComponent(tour.title)}%20package%20for%20my%20trip%20on%20[date]%20with%20[number]%20people" 
+           class="btn whatsapp-btn" target="_blank">
+          <i class="fab fa-whatsapp"></i> Customize on WhatsApp
+        </a>
+        <button class="btn secondary-btn close-modal-btn">
+          <i class="fas fa-arrow-left"></i> Browse Other Packages
+        </button>
+      </div>
+    `;
+    
+    modal.style.display = "block";
+    document.body.style.overflow = "hidden";
+    
+    // Add event listener to the new "Browse" button
+    document.querySelector('.close-modal-btn').addEventListener('click', closeAndScrollToTours);
+  }
+
+  // Close Modal and Scroll to Tours Section
+  function closeAndScrollToTours() {
+    modal.style.display = "none";
+    document.body.style.overflow = "auto";
+    
+    // Smooth scroll to tours section
+    const toursSection = document.getElementById('tours');
+    toursSection.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+    
+    // Add slight delay for smoother transition
+    setTimeout(() => {
+      toursSection.focus();
+    }, 500);
+  }
+
+  // Event Listeners
+  tourButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const tourId = button.getAttribute('data-tour');
+      openTourModal(tourId);
+    });
+  });
+
+  closeModal.addEventListener('click', () => {
+    modal.style.display = "none";
+    document.body.style.overflow = "auto";
+  });
+
+  // Close when clicking outside modal
+  window.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.style.display = "none";
+      document.body.style.overflow = "auto";
+    }
+  });
+
+  // Close with Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.style.display === 'block') {
+      modal.style.display = "none";
+      document.body.style.overflow = "auto";
+    }
+  });
+});
+
+// FAQ Section JavaScript
+document.addEventListener('DOMContentLoaded', function() {
+  const faqCards = document.querySelectorAll('.faq-card');
+  
+  // Add ARIA attributes for accessibility
+  faqCards.forEach((card, index) => {
+    const question = card.querySelector('.faq-question');
+    const answer = card.querySelector('.faq-answer');
+    
+    // Set initial ARIA attributes
+    question.setAttribute('aria-expanded', 'false');
+    question.setAttribute('aria-controls', `faq-answer-${index}`);
+    question.setAttribute('id', `faq-question-${index}`);
+    answer.setAttribute('id', `faq-answer-${index}`);
+    answer.setAttribute('aria-labelledby', `faq-question-${index}`);
+    
+    // Keyboard navigation support
+    question.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggleFaq(card);
+      }
+      
+      // Arrow key navigation between FAQs
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        const nextCard = card.nextElementSibling;
+        if (nextCard && nextCard.classList.contains('faq-card')) {
+          nextCard.querySelector('.faq-question').focus();
+        }
+      }
+      
+      if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        const prevCard = card.previousElementSibling;
+        if (prevCard && prevCard.classList.contains('faq-card')) {
+          prevCard.querySelector('.faq-question').focus();
+        }
+      }
+    });
+  });
+
+  // Toggle FAQ function
+  function toggleFaq(card) {
+    const isOpening = !card.classList.contains('active');
+    const question = card.querySelector('.faq-question');
+    const answer = card.querySelector('.faq-answer');
+    
+    // Close all other FAQs when opening a new one
+    if (isOpening) {
+      document.querySelectorAll('.faq-card.active').forEach(openCard => {
+        if (openCard !== card) {
+          openCard.classList.remove('active');
+          openCard.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+          openCard.querySelector('.faq-answer').style.maxHeight = '0';
+        }
+      });
+    }
+    
+    // Toggle current FAQ
+    card.classList.toggle('active');
+    const isExpanded = card.classList.contains('active');
+    question.setAttribute('aria-expanded', isExpanded.toString());
+    
+    // Smooth height transition
+    if (isExpanded) {
+      answer.style.maxHeight = answer.scrollHeight + 'px';
+      
+      // Focus the first link in the answer for keyboard users
+      setTimeout(() => {
+        const firstLink = answer.querySelector('a');
+        if (firstLink) firstLink.focus();
+      }, 300);
+    } else {
+      answer.style.maxHeight = '0';
+    }
+  }
+
+  // Click handler for FAQ questions
+  document.querySelectorAll('.faq-question').forEach(question => {
+    question.addEventListener('click', () => {
+      const card = question.closest('.faq-card');
+      toggleFaq(card);
+    });
+  });
+
+  // Close all FAQs when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.faq-card')) {
+      document.querySelectorAll('.faq-card.active').forEach(card => {
+        card.classList.remove('active');
+        card.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+        card.querySelector('.faq-answer').style.maxHeight = '0';
+      });
+    }
+  });
+
+  // Optional: Auto-open FAQ if URL has hash matching question ID
+  if (window.location.hash) {
+    const targetQuestion = document.querySelector(window.location.hash);
+    if (targetQuestion && targetQuestion.classList.contains('faq-question')) {
+      const card = targetQuestion.closest('.faq-card');
+      toggleFaq(card);
+      
+      // Smooth scroll to the question
+      setTimeout(() => {
+        targetQuestion.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }, 100);
+    }
+  }
+});
+  
 </script>
 </body>
 </html>
