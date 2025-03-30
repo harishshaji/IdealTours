@@ -258,6 +258,271 @@ header.sticky {
   z-index: 0;
 }
 
+
+/* ===== Tour Modal ===== */
+.tour-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.88);
+  z-index: 2000;
+  overflow-y: auto;
+  backdrop-filter: blur(8px);
+}
+
+.modal-content {
+  position: relative;
+  background: white;
+  margin: 4% auto;
+  padding: 40px;
+  width: 90%;
+  max-width: 800px;
+  border-radius: 15px;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.25);
+}
+
+.close-modal {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 32px;
+  color: #613842;
+  cursor: pointer;
+  transition: all 0.3s;
+  background: rgba(255,255,255,0.9);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  z-index: 1;
+}
+
+.close-modal:hover {
+  transform: rotate(90deg);
+  color: #ff6f61;
+}
+
+.modal-body {
+  position: relative;
+}
+
+.modal-body h2 {
+  color: #613842;
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.tagline {
+  color: #ff6f61;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.modal-body img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* Places Description Section */
+.places-section {
+  background: #f9f5ff;
+  padding: 30px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.places-section:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(to bottom, #613842, #ff6f61);
+}
+
+.places-section h3 {
+  color: #613842;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+}
+
+.places-section h3 i {
+  margin-right: 12px;
+  color: #ff6f61;
+}
+
+.place-card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 3px 15px rgba(0,0,0,0.05);
+  border-left: 3px solid #613842;
+}
+
+.place-card h4 {
+  color: #613842;
+  margin-bottom: 10px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+}
+
+.place-card h4 i {
+  margin-right: 10px;
+  color: #ff6f61;
+  font-size: 16px;
+}
+
+.place-card p {
+  color: #555;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Highlights Section */
+.highlights-box {
+  background: linear-gradient(to right, #f8f9ff, #f0f7ff);
+  padding: 25px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  border-left: 5px solid #4a90e2;
+}
+
+.highlights-box h3 {
+  color: #2c5282;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+}
+
+.highlights-box ul {
+  padding-left: 5px;
+  list-style: none;
+}
+
+.highlights-box li {
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  color: #2d3748;
+  line-height: 1.6;
+}
+
+.highlights-box li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #38a169;
+  font-weight: bold;
+  font-size: 18px;
+  width: 28px;
+  height: 28px;
+  background: #ebf8f2;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* CTA Buttons */
+.modal-cta {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.whatsapp-btn {
+  background: #25d366 !important;
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.whatsapp-btn:hover {
+  background: #128c7e !important;
+  transform: translateY(-3px);
+}
+
+.secondary-btn {
+  background: #f7fafc !important;
+  color: #2d3748 !important;
+  flex: 1;
+  min-width: 200px;
+  border: 1px solid #e2e8f0 !important;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.secondary-btn:hover {
+  background: #edf2f7 !important;
+  border-color: #cbd5e0 !important;
+  transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .modal-content {
+    padding: 30px 20px;
+    margin: 10% auto;
+  }
+  
+  .modal-body img {
+    height: 250px;
+  }
+  
+  .modal-cta {
+    flex-direction: column;
+  }
+  
+  .whatsapp-btn, 
+  .secondary-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-content {
+    width: 95%;
+    padding: 25px 15px;
+  }
+  
+  .modal-body h2 {
+    font-size: 26px;
+  }
+  
+  .places-section,
+  .highlights-box {
+    padding: 20px;
+  }
+}
 /* Hero Content */
 .hero .container {
   position: relative;
@@ -1281,3 +1546,268 @@ footer {
   margin-top: 20px;
 }
 
+/* ===== TAXI FAQ SECTION ===== */
+.faq-section {
+  padding: 80px 0;
+  background: #f9f9f9;
+  position: relative;
+  overflow: hidden;
+}
+
+.faq-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('./Image/faq-bg-pattern.png') repeat;
+  opacity: 0.03;
+  z-index: 0;
+}
+
+.faq-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+.faq-section h2 {
+  text-align: center;
+  color: #613842;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.faq-section .subtitle {
+  text-align: center;
+  color: #666;
+  font-size: 1.1rem;
+  margin-bottom: 50px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.faq-grid {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.faq-card {
+  background: white;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  box-shadow: 0 3px 15px rgba(97, 56, 66, 0.08);
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border: 1px solid rgba(97, 56, 66, 0.1);
+}
+
+.faq-card:hover {
+  box-shadow: 0 5px 25px rgba(97, 56, 66, 0.12);
+  transform: translateY(-3px);
+}
+
+.faq-question {
+  padding: 22px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.faq-question h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #333;
+  font-weight: 600;
+  flex: 1;
+  padding-right: 20px;
+}
+
+.faq-question i {
+  color: #613842;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  min-width: 20px;
+  text-align: center;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s cubic-bezier(0.5, 0, 0.1, 1);
+}
+
+.faq-answer-inner {
+  padding: 0 25px 25px;
+}
+
+.faq-answer p {
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 15px; 
+  font-size: 1rem;
+  padding: 5px 10px; 
+}
+
+.faq-answer a {
+  color: #613842;
+  font-weight: 600;
+  text-decoration: underline;
+  transition: all 0.3s;
+}
+
+.faq-answer a:hover {
+  color: #ff6f61;
+  text-decoration: none;
+}
+
+/* Active State */
+.faq-card.active {
+  border-color: rgba(97, 56, 66, 0.3);
+}
+
+.faq-card.active .faq-question {
+  background: rgba(97, 56, 66, 0.03);
+}
+
+.faq-card.active .faq-question h3 {
+  color: #613842;
+}
+
+.faq-card.active .faq-question i {
+  transform: rotate(180deg);
+  color: #ff6f61;
+}
+
+.faq-card.active .faq-answer {
+  max-height: 500px;
+}
+
+/* Decorative Elements */
+.faq-question::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 25px;
+  width: calc(100% - 50px);
+  height: 1px;
+  background: rgba(97, 56, 66, 0.1);
+  transition: all 0.3s;
+}
+
+.faq-card.active .faq-question::after {
+  opacity: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .faq-section {
+    padding: 60px 0;
+  }
+  
+  .faq-section h2 {
+    font-size: 2rem;
+  }
+  
+  .faq-section .subtitle {
+    font-size: 1rem;
+    margin-bottom: 40px;
+    padding: 0 20px;
+  }
+  
+  .faq-question {
+    padding: 18px 20px;
+  }
+  
+  .faq-question h3 {
+    font-size: 1.1rem;
+  }
+  
+  .faq-answer-inner {
+    padding: 0 20px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .faq-section {
+    padding: 50px 0;
+  }
+  
+  .faq-section h2 {
+    font-size: 1.8rem;
+  }
+  
+  .faq-question h3 {
+    font-size: 1rem;
+    padding-right: 15px;
+  }
+  
+  .faq-question i {
+    font-size: 1rem;
+  }
+}
+
+/* Animation for first load */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.faq-card {
+  animation: fadeInUp 0.6s ease forwards;
+  opacity: 0;
+}
+
+.faq-card:nth-child(1) { animation-delay: 0.1s; }
+.faq-card:nth-child(2) { animation-delay: 0.2s; }
+.faq-card:nth-child(3) { animation-delay: 0.3s; }
+.faq-card:nth-child(4) { animation-delay: 0.4s; }
+.faq-card:nth-child(5) { animation-delay: 0.5s; }
+.faq-card:nth-child(6) { animation-delay: 0.6s; }
+.faq-card:nth-child(7) { animation-delay: 0.7s; }
+.faq-card:nth-child(8) { animation-delay: 0.8s; }
+.faq-card:nth-child(9) { animation-delay: 0.9s; }
+.faq-card:nth-child(10) { animation-delay: 1s; }
+
+/* WhatsApp Button Mobile Fix */
+.whatsapp-chat {
+  text-align: center;
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .whatsapp-chat {
+    padding: 15px;
+  }
+  
+  .whatsapp-chat h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    line-height: 1.3;
+  }
+  
+  .whatsapp-chat p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+  }
+  
+  .whatsapp-btn {
+    display: block; /* Change to block for better mobile control */
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+    padding: 12px 15px;
+    font-size: 15px;
+  }
+}
